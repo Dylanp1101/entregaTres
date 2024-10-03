@@ -1,0 +1,77 @@
+//import de variables
+
+@import "../base/utilidades/variables";
+
+
+/* estilos para tablet */
+  
+/* estilos de tablet "home" */
+@media (min-width: 600px) {
+    main {
+        padding: 40px; 
+        background-image: url("../../img/R (1).jpg"); 
+
+        h1 {
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 1.1em; 
+        }
+
+        .boton {
+            margin: 20px; 
+        }
+    }
+}
+/* estilos de tablet "locales" */
+@media screen and (min-width: 600px) {
+    .mapa {
+        padding-bottom: 50%; 
+    }
+}
+
+/* estilos de tablet "contactos" */
+@media screen and (min-width: 600px) {
+    form {
+        width: 100%; 
+        max-width: 600px; 
+
+        input[type="text"],
+        input[type="email"] {
+            width: calc(100% - 16px); 
+        }
+
+        label {
+            width: auto; 
+        }
+    }
+}
+/* estilos de tablet "nosotros" */
+@media (min-width: 600px) {
+    .galeria {
+        width: 80%; 
+        grid-template-columns: repeat(4, 1fr); 
+        grid-template-rows: repeat(4, 1fr); 
+    }
+    
+    
+    .img-uno {
+        grid-column: span 2; 
+    }
+    .img-dos {
+        grid-column: span 2; 
+    }
+}
+/* estilos de tablet "productos" */
+@media (min-width: 600px) {
+    .container2 {
+        
+        padding: 40px; 
+        
+        img {
+            height: $img-size + 20px; 
+            width: $img-size + 20px; 
+        }
+    }
+}

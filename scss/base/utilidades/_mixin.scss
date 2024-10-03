@@ -1,0 +1,15 @@
+// mixin de flex
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button-style {
+    background-color: $color-neg;
+    padding: $padding-button;
+    border: 2px solid $border-color;
+    color: $color-blan2;
+    text-decoration: none;
+}
