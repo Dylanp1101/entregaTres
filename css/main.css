@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* reset */
 * {
   margin: 0;
@@ -20,7 +21,7 @@ header img {
 main {
   text-align: left;
   padding: 30px;
-  background-image: url("../../img/R (1).jpg");
+  background-image: url("../../img/fondoDePantalla2.jpeg");
 }
 main h1 {
   margin-bottom: 20px;
@@ -47,19 +48,36 @@ main .boton a {
 /* estilo de pagina "productos" */
 .container2 {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: aliceblue;
+  gap: 20px;
+  max-width: 960px;
+  margin: 0 auto;
 }
-.container2 img {
-  height: 270px;
-  width: 270px;
-  margin: 20px;
+.container2 .tarjeta {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
-
-.title {
-  text-align: center;
+.container2 .tarjeta:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+.container2 .tarjeta img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #eee;
+}
+.container2 .tarjeta h2 {
+  margin: 15px;
+  font-size: 1.5rem;
+}
+.container2 .tarjeta p {
+  margin: 15px;
+  color: #666;
 }
 
 /* Estilos de pagina "nosotros" */
@@ -96,6 +114,27 @@ main .boton a {
   height: 100%;
   width: 100%;
   object-fit: cover;
+}
+
+.detallesDeMontana {
+  max-width: 800px; /* Cambié a 800px para que sea más ancho */
+  margin: 20px auto;
+  background: rgba(255, 255, 255, 0.95); /* Fondo ligeramente más opaco */
+  padding: 20px;
+  border-radius: 10px; /* Bordes más redondeados */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+.detallesDeMontana p {
+  margin-bottom: 20px; /* Menos espacio entre párrafos */
+  text-align: justify;
+  color: #333; /* Texto un poco más oscuro para mejor contraste */
+  line-height: 1.6; /* Espaciado entre líneas */
+}
+
+.detallesDeMontana strong {
+  color: #e67e22; /* Color para texto en negrita */
+  font-weight: bold; /* Asegura que el texto esté en negrita */
 }
 
 /* estilo de pagina "contacto" */
@@ -151,6 +190,22 @@ form input[type=submit]:hover {
   height: 100%;
 }
 
+.contacto {
+  color: #fff;
+  width: 20rem;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 3rem;
+  background-color: #000;
+  border-radius: 2rem 0;
+  margin: auto;
+  margin-top: auto;
+}
+
 /* estilos del pie de pagina */
 footer {
   text-align: center;
@@ -164,7 +219,7 @@ footer {
 @media (min-width: 600px) {
   main {
     padding: 40px;
-    background-image: url("../../img/R (1).jpg");
+    background-image: url("../../img/fondoDePantalla2.jpeg");
   }
   main h1 {
     font-size: 2em;
@@ -211,20 +266,16 @@ footer {
   }
 }
 /* estilos de tablet "productos" */
-@media (min-width: 600px) {
-  .container2 {
-    padding: 40px;
-  }
-  .container2 img {
-    height: 290px;
-    width: 290px;
+@media screen and (min-width: 600px) {
+  .container2 .tarjeta {
+    width: 300px;
   }
 }
 /* estilo de mobile de home */
 @media screen and (min-width: 374px) {
   main {
     text-align: center;
-    background-image: url("../../img/R (1).jpg");
+    background-image: url("../../img/fondoDePantalla2.jpeg");
   }
   .video {
     position: relative;
@@ -283,12 +334,9 @@ footer {
 }
 /* Estilos de mobile "productos"*/
 @media screen and (min-width: 374px) {
-  .container2 {
-    flex-direction: column;
-  }
-  .container2 article {
-    width: 100%;
+  .container2 .tarjeta {
+    width: 250px;
   }
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=main.css..map */
