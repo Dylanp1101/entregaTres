@@ -20,7 +20,7 @@ header img {
 main {
   text-align: left;
   padding: 30px;
-  background-image: url("../../img/fondoDePantalla2.jpeg");
+  background-image: url("../img/fondoDePantalla2.png");
 }
 main h1 {
   margin-bottom: 20px;
@@ -260,7 +260,7 @@ footer {
 @media screen and (min-width: 600px) {
   main {
     padding: 40px;
-    background-image: url("../../img/fondoDePantalla2.jpeg");
+    background-image: url("../img/fondoDePantalla2.png");
   }
   main h1 {
     font-size: 2em;
@@ -327,7 +327,7 @@ footer {
 @media screen and (min-width: 374px) {
   main {
     text-align: center;
-    background-image: url("../../img/fondoDePantalla2.jpeg");
+    background-image: url("../img/fondoDePantalla2.png");
   }
   .video {
     position: relative;
