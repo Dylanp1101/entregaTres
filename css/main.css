@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* reset */
 * {
   margin: 0;
@@ -13,8 +12,8 @@ header {
   padding-bottom: 20px;
 }
 header img {
-  height: 10%;
-  width: 10%;
+  height: 8%;
+  width: 8%;
 }
 
 /* estilos del index */
@@ -32,17 +31,63 @@ main p {
   color: white;
   margin: 30px;
 }
-main .boton {
-  background-color: black;
-  padding: 10px;
-  border: 2px solid rgb(144, 139, 139);
-  color: aliceblue;
-  text-decoration: none;
-  display: inline-block;
-  margin: 30px;
+main .cardContainer {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  gap: 10px;
+  flex-wrap: wrap;
 }
-main .boton a {
-  color: aliceblue;
+main .cardContainer .card {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  width: 300px;
+  transition: transform 0.3s;
+  text-align: center;
+  z-index: 2;
+  margin-bottom: auto;
+}
+main .cardContainer .card:hover {
+  transform: translateY(-5px);
+}
+main .cardContainer .card .cardImage {
+  width: 100%;
+  height: auto;
+  border-radius: 8px 8px 0 0;
+}
+main .cardContainer .card h2 {
+  margin: 10px 0 5px 0;
+  color: white;
+}
+main .cardContainer .card .divider {
+  width: 50px;
+  border: 1px solid gray;
+  margin: 10px auto;
+}
+main .cardContainer .card p {
+  color: white;
+}
+main .cardContainer .card a.cardButton {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+main .cardContainer .card a.cardButton:hover {
+  background-color: grey;
+}
+main .cardContainer:hover .card {
+  filter: blur(4px);
+}
+main .cardContainer:hover .card:hover {
+  filter: none;
+  transform: scale(1.05);
 }
 
 /* estilo de pagina "productos" */
@@ -117,24 +162,20 @@ main .boton a {
 }
 
 .detallesDeMontana {
-  max-width: 800px; /* Cambié a 800px para que sea más ancho */
+  max-width: 1200px;
   margin: 20px auto;
-  background: rgba(255, 255, 255, 0.95); /* Fondo ligeramente más opaco */
+  background: rgba(255, 255, 255, 0.9);
   padding: 20px;
-  border-radius: 10px; /* Bordes más redondeados */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
 }
-
 .detallesDeMontana p {
-  margin-bottom: 20px; /* Menos espacio entre párrafos */
+  margin-bottom: 30px;
   text-align: justify;
-  color: #333; /* Texto un poco más oscuro para mejor contraste */
-  line-height: 1.6; /* Espaciado entre líneas */
+  color: #2c3e50;
 }
-
 .detallesDeMontana strong {
-  color: #e67e22; /* Color para texto en negrita */
-  font-weight: bold; /* Asegura que el texto esté en negrita */
+  color: #e67e22;
 }
 
 /* estilo de pagina "contacto" */
@@ -216,7 +257,7 @@ footer {
 
 /* estilos para tablet */
 /* estilos de tablet "home" */
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   main {
     padding: 40px;
     background-image: url("../../img/fondoDePantalla2.jpeg");
@@ -252,7 +293,7 @@ footer {
   }
 }
 /* estilos de tablet "nosotros" */
-@media (min-width: 600px) {
+@media screen and (min-width: 600px) {
   .galeria {
     width: 80%;
     grid-template-columns: repeat(4, 1fr);
@@ -263,6 +304,17 @@ footer {
   }
   .img-dos {
     grid-column: span 2;
+  }
+  .detallesDeMontana {
+    max-width: 100%;
+    padding: 15px;
+    margin: 10px;
+  }
+  .detallesDeMontana p {
+    margin-bottom: 20px;
+  }
+  .detallesDeMontana strong {
+    font-size: 1.1rem;
   }
 }
 /* estilos de tablet "productos" */
@@ -323,13 +375,25 @@ footer {
   }
 }
 /* Estilos de mobile "nosotros"*/
-@media (min-width: 374px) {
+@media screen and (min-width: 374px) {
   .galeria {
     width: 80%;
   }
   .galeria {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
+  }
+  .detallesDeMontana {
+    max-width: 800px;
+    padding: 30px;
+    margin: 30px auto;
+  }
+  .detallesDeMontana p {
+    margin-bottom: 25px;
+    font-size: 1.1rem;
+  }
+  .detallesDeMontana strong {
+    font-size: 1.2rem;
   }
 }
 /* Estilos de mobile "productos"*/
@@ -339,4 +403,4 @@ footer {
   }
 }
 
-/*# sourceMappingURL=main.css..map */
+/*# sourceMappingURL=main.css.map */
